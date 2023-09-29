@@ -7,3 +7,13 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+/* custom-utilities.css */
+@layer utilities {
+  .bg-d {
+    background-color: #fcb903;
+  }
+  .text-d {
+    color: #fcb903;
+  }
+}
