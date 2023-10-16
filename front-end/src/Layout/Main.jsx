@@ -5,7 +5,7 @@ import Header from "../Components/Header/Header";
 const Main = () => {
   return (
     <div className="max-w-[96rem] mx-auto">
-      <div>
+      <div className="mb-[80px] sm:mb-[90px]  md:mb-[100px]">
         <Header />
       </div>
       <div className="lg:flex">

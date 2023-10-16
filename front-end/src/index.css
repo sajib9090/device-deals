@@ -16,4 +16,7 @@
   .text-d {
     color: #fcb903;
   }
+  .border-d {
+    border-color: #fcb903;
+  }
 }

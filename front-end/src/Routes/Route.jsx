@@ -18,6 +18,9 @@ const WatchesCollection = lazy(() =>
 const ConsumerElectronics = lazy(() =>
   import("../Pages/ConsumerElectronics/ConsumerElectronics")
 );
+const ProductDetails = lazy(() =>
+  import("../Components/ProductDetails/ProductDetails")
+);
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -65,6 +68,14 @@ export const router = createBrowserRouter([
         element: (
           <Suspense fallback={<h1>Loading...</h1>}>
             <ConsumerElectronics />
+          </Suspense>
+        ),
+      },
+      {
+        path: "product-details",
+        element: (
+          <Suspense fallback={<h1>Loading...</h1>}>
+            <ProductDetails />
           </Suspense>
         ),
       },

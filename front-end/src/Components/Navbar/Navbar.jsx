@@ -39,27 +39,31 @@ const Navbar = () => {
     },
   ];
   //navbar toggle option for small screen
-  const { toggleOpen, setToggleOpen } = useNavbarContext();
+  const { toggleOpen, setToggleOpen, condition } = useNavbarContext();
 
   return (
     <div className="relative">
-      <nav className="w-[300px] hidden lg:block bg-white min-h-screen space-y-4 pt-6 border-r border-l border-gray-200">
-        {items?.map((item) => (
-          <NavLink
-            to={item?.value}
-            title={item?.title}
-            key={item?.id}
-            className={({ isActive }) =>
-              isActive
-                ? "flex items-center text-d text-xl px-4 font-medium hover:text-d duration-500"
-                : "flex items-center text-black text-xl px-4 font-medium hover:text-d duration-500"
-            }
-          >
-            <p>{item?.icon}</p>
-            <li className="ml-2 list-none">{item?.title}</li>
-          </NavLink>
-        ))}
-      </nav>
+      <>
+        {condition ? null : (
+          <nav className="w-[300px] hidden lg:block bg-[#EEEEEE] min-h-screen max-h-full space-y-4 pt-6 border-r border-l border-gray-200">
+            {items?.map((item) => (
+              <NavLink
+                to={item?.value}
+                title={item?.title}
+                key={item?.id}
+                className={({ isActive }) =>
+                  isActive
+                    ? "flex items-center text-d text-xl px-4 font-medium hover:text-d duration-500"
+                    : "flex items-center text-black text-xl px-4 font-medium hover:text-d duration-500"
+                }
+              >
+                <p>{item?.icon}</p>
+                <li className="ml-2 list-none">{item?.title}</li>
+              </NavLink>
+            ))}
+          </nav>
+        )}
+      </>
       {/* small screen */}
       <nav
         className={

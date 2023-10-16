@@ -10,8 +10,18 @@ const NavbarProvider = ({ children }) => {
     setToggleOpen(!toggleOpen);
   };
 
+  const [condition, setCondition] = useState(false);
+
   return (
-    <NavbarContext.Provider value={{ handleOpen, toggleOpen, setToggleOpen }}>
+    <NavbarContext.Provider
+      value={{
+        handleOpen,
+        toggleOpen,
+        setToggleOpen,
+        setCondition,
+        condition,
+      }}
+    >
       {children}
     </NavbarContext.Provider>
   );
