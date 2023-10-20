@@ -31,7 +31,7 @@ const Header = () => {
           </Link>
         </div>
         <div className="flex items-center space-x-3 sm:space-x-6 pr-2 sm:pr-4">
-          <div className="relative">
+          <Link to={"cart"} className="relative">
             <PiShoppingCartLight
               title="Cart"
               className="h-7 w-7 sm:h-9 sm:w-9 cursor-pointer text-gray-600"
@@ -39,7 +39,7 @@ const Header = () => {
             <div className="absolute w-6 h-6 bg-d rounded-full top-[-0.7rem] right-[-0.5rem] flex items-center justify-center">
               <p className="text-[.6rem] text-black">120</p>
             </div>
-          </div>
+          </Link>
           <div>
             <CiUser
               title="Account"

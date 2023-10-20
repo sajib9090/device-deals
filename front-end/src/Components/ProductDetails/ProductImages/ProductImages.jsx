@@ -32,14 +32,14 @@ const ProductImages = () => {
 
   return (
     <div className="max-h-[100vh] min-h-[440px] flex flex-col items-center ">
-      <div className="h-full w-full">
+      <div className="">
         <img
           src={currentImage?.link}
           alt="Main Product"
-          className="cursor-pointer"
+          className="cursor-pointer max-h-[360px]"
         />
       </div>
-      <div className="w-[22%] flex justify-center gap-2">
+      <div className="w-[21.3%] mt-1 flex justify-center gap-1">
         {filteredImages.map((image, index) => (
           <img
             key={index}

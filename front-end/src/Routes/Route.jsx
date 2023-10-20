@@ -21,6 +21,7 @@ const ConsumerElectronics = lazy(() =>
 const ProductDetails = lazy(() =>
   import("../Components/ProductDetails/ProductDetails")
 );
+const Cart = lazy(() => import("../Pages/Cart/Cart"));
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -30,6 +31,14 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "cart",
+        element: (
+          <Suspense fallback={<h1>Loading...</h1>}>
+            <Cart />
+          </Suspense>
+        ),
       },
       {
         path: "creators-gears",

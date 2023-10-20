@@ -68,8 +68,8 @@ const Navbar = () => {
       <nav
         className={
           toggleOpen
-            ? "w-[280px] block lg:hidden bg-white min-h-screen space-y-4 pt-6 border-r border-l border-gray-200 absolute left-0 duration-500 ease-in-out"
-            : "w-[280px] block lg:hidden bg-white min-h-screen space-y-4 pt-6 border-r border-l border-gray-200 absolute left-[-20rem] duration-500 ease-in-out"
+            ? "w-[280px] block lg:hidden bg-white min-h-screen space-y-4 pt-6 border-r border-l border-gray-200 absolute left-0 duration-500 ease-in-out z-[999]"
+            : "w-[280px] block lg:hidden bg-white min-h-screen space-y-4 pt-6 border-r border-l border-gray-200 absolute left-[-20rem] duration-500 ease-in-out z-[999]"
         }
       >
         {items?.map((item) => (

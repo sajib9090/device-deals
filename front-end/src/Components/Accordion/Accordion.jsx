@@ -34,7 +34,7 @@ const Accordion = () => {
                 <Disclosure.Button
                   className={`${
                     open
-                      ? "flex w-full justify-between rounded border border-d text-d bg-[#F4F4F4] px-4 py-2 text-left text-sm font-medium focus:outline-none"
+                      ? "flex w-full justify-between rounded border border-d text-d bg-white px-4 py-2 text-left text-sm font-medium focus:outline-none"
                       : "flex w-full justify-between rounded border hover:border-d duration-700 bg-[#F4F4F4] px-4 py-2 text-left text-sm font-medium focus:outline-none"
                   }`}
                 >

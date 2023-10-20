@@ -30,7 +30,7 @@ const ProductDetails = () => {
         <div className="border-b border-gray-300 col-span-12 sm:col-span-7 lg:col-span-5">
           <Info price={16554} previousPrice={18999} stock={10} />
         </div>
-        <div className="hidden max-h-[100vh] sm:min-h-[250px] col-span-12 lg:min-h-[440px] sm:col-span-12 lg:col-span-3">
+        <div className="max-h-[100vh] sm:min-h-[250px] col-span-12 lg:min-h-[440px] sm:col-span-12 lg:col-span-3 my-4 lg:my-0">
           <Delivery />
         </div>
       </div>

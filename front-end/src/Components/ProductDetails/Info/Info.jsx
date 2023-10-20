@@ -23,7 +23,7 @@ const Info = ({ price, previousPrice, stock }) => {
   };
   return (
     <div className="flex flex-col justify-between max-h-[100vh] min-h-[440px]">
-      <div className="pt-12 md:pt-[20%]">
+      <div className="pt-12 md:pt-[10%]">
         <div className="flex items-center space-x-4">
           <h2 className="text-red-500 font-bold text-xl">
             <CurrencyFormatter value={price} />
@@ -51,7 +51,7 @@ const Info = ({ price, previousPrice, stock }) => {
           <li>6 months warranty.</li>
         </ul>
       </div>
-      <div className="md:flex flex-col pb-4">
+      <div className="md:flex flex-col pb-1">
         <p className="text-red-500 py-2">{error}</p>
         <div className="flex items-center space-x-2">
           <p>Quantity</p>
