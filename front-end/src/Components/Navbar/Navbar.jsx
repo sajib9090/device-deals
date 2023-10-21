@@ -4,6 +4,7 @@ import { BsSmartwatch, BsHeadphones } from "react-icons/bs";
 import { GiGreenPower } from "react-icons/gi";
 import { NavLink } from "react-router-dom";
 import { useNavbarContext } from "../../GlobalContext/NavbarContext";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const items = [
@@ -40,6 +41,19 @@ const Navbar = () => {
   ];
   //navbar toggle option for small screen
   const { toggleOpen, setToggleOpen, condition } = useNavbarContext();
+  const [scroll, setScroll] = useState();
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      const isScrolling = window.scrollY > 100;
+      if (isScrolling) {
+        setScroll(isScrolling);
+        if (scroll) {
+          setToggleOpen(false);
+        }
+      }
+    });
+  }, [scroll, setToggleOpen]);
 
   return (
     <div className="relative">
