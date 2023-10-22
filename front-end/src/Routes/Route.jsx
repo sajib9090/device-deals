@@ -24,8 +24,14 @@ const ProductDetails = lazy(() =>
 const Cart = lazy(() => import("../Pages/Cart/Cart"));
 import DashboardLayout from "../Layout/DashboardLayout";
 import Dashboard from "../Pages/Dashboard/Dashboard";
-const UserManagement = lazy(() =>
-  import("../Pages/Dashboard/UserManagement/UserManagement")
+const ManageUsers = lazy(() =>
+  import("../Pages/Dashboard/ManageUsers/ManageUsers")
+);
+const ManageProducts = lazy(() =>
+  import("../Pages/Dashboard/ManageProducts/ManageProducts")
+);
+const ManageOrders = lazy(() =>
+  import("../Pages/Dashboard/ManageOrders/ManageOrders")
 );
 export const router = createBrowserRouter([
   {
@@ -105,10 +111,26 @@ export const router = createBrowserRouter([
         element: <Dashboard />,
       },
       {
-        path: "user-management",
+        path: "manage-users",
         element: (
           <Suspense fallback={<h1>Loading...</h1>}>
-            <UserManagement />
+            <ManageUsers />
+          </Suspense>
+        ),
+      },
+      {
+        path: "manage-products",
+        element: (
+          <Suspense fallback={<h1>Loading...</h1>}>
+            <ManageProducts />
+          </Suspense>
+        ),
+      },
+      {
+        path: "manage-orders",
+        element: (
+          <Suspense fallback={<h1>Loading...</h1>}>
+            <ManageOrders />
           </Suspense>
         ),
       },

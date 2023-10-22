@@ -30,8 +30,8 @@ const DashboardHeader = () => {
           />
         </div>
         <div className="ml-2">
-          <p className="text-lg font-bold">Rayan Ahmed</p>
-          <p className="tracking-[3px] text-d">Admin</p>
+          <p className="text-sm lg:text-lg font-bold">Rayan Ahmed</p>
+          <p className="text-xs lg:text-base tracking-[3px] text-d">Admin</p>
         </div>
       </div>
     </div>
