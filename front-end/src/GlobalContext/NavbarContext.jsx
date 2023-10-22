@@ -9,6 +9,11 @@ const NavbarProvider = ({ children }) => {
   const handleOpen = () => {
     setToggleOpen(!toggleOpen);
   };
+  //dashboard
+  const [dashboardToggle, setDashboardToggle] = useState(false);
+  const handleDashboardToggle = () => {
+    setDashboardToggle(!dashboardToggle);
+  };
 
   const [condition, setCondition] = useState(false);
 
@@ -20,6 +25,9 @@ const NavbarProvider = ({ children }) => {
         setToggleOpen,
         setCondition,
         condition,
+        dashboardToggle,
+        setDashboardToggle,
+        handleDashboardToggle,
       }}
     >
       {children}

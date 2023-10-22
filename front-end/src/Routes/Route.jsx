@@ -22,6 +22,11 @@ const ProductDetails = lazy(() =>
   import("../Components/ProductDetails/ProductDetails")
 );
 const Cart = lazy(() => import("../Pages/Cart/Cart"));
+import DashboardLayout from "../Layout/DashboardLayout";
+import Dashboard from "../Pages/Dashboard/Dashboard";
+const UserManagement = lazy(() =>
+  import("../Pages/Dashboard/UserManagement/UserManagement")
+);
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -85,6 +90,25 @@ export const router = createBrowserRouter([
         element: (
           <Suspense fallback={<h1>Loading...</h1>}>
             <ProductDetails />
+          </Suspense>
+        ),
+      },
+    ],
+  },
+  {
+    path: "/dashboard",
+    element: <DashboardLayout />,
+    errorElement: <h1>Dashboard Error</h1>,
+    children: [
+      {
+        path: "/dashboard",
+        element: <Dashboard />,
+      },
+      {
+        path: "user-management",
+        element: (
+          <Suspense fallback={<h1>Loading...</h1>}>
+            <UserManagement />
           </Suspense>
         ),
       },

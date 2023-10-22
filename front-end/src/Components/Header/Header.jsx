@@ -13,7 +13,7 @@ const Header = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      const isScrolling = window.scrollY > 100;
+      const isScrolling = window.scrollY > 1;
       if (isScrolling) {
         setScroll(isScrolling);
         if (scroll) {
@@ -65,18 +65,25 @@ const Header = () => {
           <div
             className={
               menu
-                ? `h-[100px] w-[150px] z-[999] bg-gray-200 absolute top-12 lg:top-14 right-0 shadow-2xl rounded duration-500 ease-in-out`
-                : "h-[100px] w-[150px] z-[999] bg-gray-200 absolute -top-[300px] right-0 shadow-2xl rounded duration-500 ease-in-out"
+                ? `h-[100px] w-[150px] z-[999] bg-gray-100 absolute top-12 lg:top-14 right-0 shadow-2xl rounded duration-500 ease-in-out`
+                : "h-[100px] w-[150px] z-[999] bg-gray-100 absolute -top-[300px] right-0 shadow-2xl rounded duration-500 ease-in-out"
             }
           >
-            <ul className="space-y-2 ml-4 mt-4">
+            <ul className="space-y-2 ml-4 mt-4 text-lg">
               <li>
-                <Link className="hover:text-d font-semibold duration-500">
+                <Link
+                  className="hover:text-d font-semibold duration-500"
+                  title="Profile"
+                >
                   Profile
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-d font-semibold duration-500">
+                <Link
+                  to={"/dashboard"}
+                  className="hover:text-d font-semibold duration-500"
+                  title="Dashboard"
+                >
                   Dashboard
                 </Link>
               </li>
